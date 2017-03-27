@@ -60,7 +60,7 @@
                                     <constraint firstAttribute="trailing" secondItem="8P8-3q-NAQ" secondAttribute="trailing" constant="8" id="Rph-ow-SvO"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="NUg-oq-iZ3">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="NUg-oq-iZ3">
                                 <rect key="frame" x="0.0" y="65" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="58v-Em-HHV"/>
@@ -140,11 +140,50 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="CLb-Zp-Ono" id="aCf-rj-BCh"/>
+                        <outlet property="searchBar" destination="NUg-oq-iZ3" id="agu-Pq-Cyi"/>
+                        <segue destination="3wd-Bd-jSM" kind="show" identifier="PokemonDetailVC" id="Qzb-Sl-Jbq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="ZfM-JF-lT4">
+            <objects>
+                <viewController id="3wd-Bd-jSM" customClass="PokemonDetailVC" customModule="pokedex3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tic-b7-pDD"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Pg-1j-ikU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dbU-CP-kEg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfO-rx-u6W">
+                                <rect key="frame" x="75" y="305" width="224" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="YiJ-Hn-xe3"/>
+                                    <constraint firstAttribute="width" constant="224" id="xsO-JC-STd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2381512559" green="0.62651536640000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="OfO-rx-u6W" firstAttribute="centerY" secondItem="dbU-CP-kEg" secondAttribute="centerY" id="2Yp-Ui-Dzr"/>
+                            <constraint firstItem="OfO-rx-u6W" firstAttribute="centerX" secondItem="dbU-CP-kEg" secondAttribute="centerX" id="wRH-sW-aax"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLbl" destination="OfO-rx-u6W" id="4J4-zg-QNK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EP7-aa-TsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877.60000000000002" y="123.68815592203899"/>
         </scene>
     </scenes>
     <resources>
