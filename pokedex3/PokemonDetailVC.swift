@@ -31,7 +31,23 @@ class PokemonDetailVC: UIViewController {
         
         nameLbl.text = pokemon.name
         
+        pokemon.downloadPokemonDetails { 
+            
+            print("Did arrive here?")
+            // Whatever we write here will only be called after complete!
+            self.updateUI()
+        }
 
+    }
+    
+    func updateUI() {
+        
+        attackLbl.text = pokemon.attack
+        defenceLbl.text = pokemon.defense
+        heightLbl.text = pokemon.height
+        weightLbl.text = pokemon.weight
+        
+        
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
